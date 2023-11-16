@@ -1,0 +1,23 @@
+# Where are all the schema files located? globs are supported eg  src/**/*.graphqls
+schema:
+  - graph/*.graphqls
+
+# Where should the generated server code go?
+exec:
+  filename: graph/generated/exec.go
+  package: generated
+
+model:
+  filename: graph/models/generated.go
+  package: models
+
+autobind:
+  - github.com/davewhit3/gqlgen-batching/example/graph/models
+
+#models:
+#  ReviewInput:
+#    model: model.Review
+#  Starship:
+#    fields:
+#      length:
+#        resolver: true
