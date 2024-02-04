@@ -33,6 +33,8 @@ func getRequestBody(r *http.Request) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("unable to get Request Body %w", err)
 	}
+	defer r.Body.Close()
+
 	return string(body), nil
 }
 
