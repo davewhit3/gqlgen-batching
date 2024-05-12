@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"github.com/99designs/gqlgen/graphql"
 	"reflect"
+	"bytes"
 )
 
 type GraphqlRawParamsCollection []*graphql.RawParams
